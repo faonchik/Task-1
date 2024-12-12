@@ -1,0 +1,170 @@
+@import "./variables.scss";
+
+.pay--button {
+  text-decoration: none;
+}
+
+.dataTable {
+  display: none;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 30px;
+  @media (min-width: $tablet-width) {
+    padding-left: 32px;
+    padding-right: 32px;
+    display: table;
+  }
+}
+
+.dataTable thead,
+.dataTable tbody,
+.dataTable thead tr,
+.dataTable th {
+  display: block;
+}
+
+.dataTable thead {
+  float: left;
+}
+
+.dataTable tbody {
+  width: auto;
+  position: relative;
+  overflow-x: auto;
+}
+
+.dataTable td {
+  padding: 0.625em;
+  line-height: 1.5em;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.dataTable th {
+  padding: 0.625em;
+  line-height: 1.5em;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.dataTable th {
+  text-align: left;
+  background: none;
+  color: #7e7e82;
+}
+
+.dataTable tbody tr {
+  display: table-cell;
+}
+
+.dataTable tbody td {
+  display: block;
+}
+
+.dataTable tbody td:nth-child(2) {
+  display: block;
+}
+
+.table__row--first-up {
+  border-radius: 6px 0px 0px 0px;
+}
+.table__row--last-up {
+  border-radius: 0px 6px 0px 0px;
+}
+.table__row--first-bottom {
+  border-radius: 0px 0px 0px 6px;
+}
+.table__row--last-bottom {
+  border-radius: 0px 0px 6px 0px;
+}
+
+.dataTable thead {
+  display: table-header-group;
+  float: none;
+}
+
+.dataTable tbody {
+  display: table-row-group;
+}
+
+.dataTable thead tr,
+.dataTable tbody tr {
+  display: table-row;
+}
+
+.dataTable th,
+.dataTable tbody td {
+  display: table-cell;
+}
+
+.dataTable td,
+.dataTable th {
+  width: auto;
+}
+
+tbody {
+  background: white;
+  color: #1b1c21;
+}
+
+.table__row {
+  height: 70px;
+  position: relative;
+  &:not(:last-child)::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #eaeaea;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.table__row--first {
+  padding-left: 16px !important;
+}
+
+.table__row--last {
+  display: flex !important;
+  justify-content: center !important;
+  height: 70px;
+  align-items: center;
+}
+
+table {
+  border-spacing: 0;
+}
+
+.table__button {
+  display: flex;
+  width: 119px;
+  height: 32px;
+  background-color: $butt-color;
+  border-radius: 16px;
+  color: white;
+  align-items: center;
+  justify-content: center; // Центрируем текст
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12px;
+  border: 1px solid $butt-color;
+  &:hover {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: white;
+    color: $butt-color;
+  }
+}
+
+table {
+  border-collapse: separate;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid transparent;
+}
